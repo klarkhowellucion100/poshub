@@ -1,0 +1,9 @@
+php_value upload_max_filesize 90M
+php_value post_max_size 90M
+php_value max.execute_time 300
+DirectoryIndex login.php
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:afccaraga.com
+Header always set Content-Security-Policy: upgrade-insecure-requests
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:afccaraga.com
+
