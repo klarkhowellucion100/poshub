@@ -55,7 +55,7 @@ if(isset($_POST['signin']))
 
                   // echo '<script> alert ("Success"), header "location:header2b.php";</script>';
                     //echo '<script> alert("Success"); window.location.href = "header2b.php";</script>';
-echo '<script> alert("Successfully Logged-in"); window.location.href = "dashboard.php";</script>';
+echo '<script> alert("Successfully Logged-in"); window.location.href = "dashboardpmo.php";</script>';
 //echo $result;
                //    header("location:header2b.php");
                 

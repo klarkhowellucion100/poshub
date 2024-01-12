@@ -345,13 +345,13 @@ $result = mysqli_fetch_assoc($data);
                                 </a>
                             <ul class="sub-menu" aria-expanded="true">
                                 
-                                <li><a href="dashboard.php">GK</a>
+                               <!-- <li><a href="dashboard.php">GK</a>
                                   
                                 </li>
                                     <?php if($usertype=="Admin"){?> 
                                     <li><a href="dashboardagriboost.php">AgriBOOST</a>
                                     <?php } ?>
-                                </li>
+                                </li> -->
 
                                 </li>
                                     <?php if($usertype=="Admin"){?> 
