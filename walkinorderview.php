@@ -116,6 +116,9 @@ $date_price = $_POST['date_price'];
                                                             case 'Class C':
                                                                 newPrice = initialPrice * 0.50;
                                                                 break;
+                                                            case 'Class D':
+                                                                newPrice = initialPrice * 0.40;
+                                                                break;
                                                             default:
                                                                 newPrice = initialPrice;
                                                         }

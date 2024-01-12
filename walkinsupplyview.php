@@ -85,7 +85,8 @@ $date_price = $_POST['date_price'];
                                                 <select class="form-select" aria-label="Default select example" id="trans_class">
                                                         <option value='Class A'>Class A</option>
                                                         <option value='Class B'>Class B</option>
-                                                        <option value='Class C'>Class C</option>                              
+                                                        <option value='Class C'>Class C</option>        
+                                                        <option value='Class D'>Class D</option>                         
                                                 </select>  
                                             </div>
 
@@ -117,6 +118,9 @@ $date_price = $_POST['date_price'];
                                                                 break;
                                                             case 'Class C':
                                                                 newPrice = initialPrice * 0.50;
+                                                                break;
+                                                            case 'Class D':
+                                                                newPrice = initialPrice * 0.40;
                                                                 break;
                                                             default:
                                                                 newPrice = initialPrice;
