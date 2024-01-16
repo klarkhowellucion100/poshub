@@ -119,7 +119,7 @@ $date_f = date('Y-m-d');
 <div class="row">
 
 
-                        <div class="col-md-6 col-xl-4">
+                        <div class="col-md-6 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="float-end mt-2">
@@ -144,7 +144,7 @@ $date_f = date('Y-m-d');
                             <?php endwhile; ?> 
                         </div>
 
-                        <div class="col-md-6 col-xl-4">
+                        <div class="col-md-6 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="float-end mt-2">
@@ -170,7 +170,7 @@ $date_f = date('Y-m-d');
                         <!-- end col-->
                         <?php endwhile; ?> 
 
-                        <div class="col-md-6 col-xl-4">
+                        <div class="col-md-6 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="float-end mt-2">
@@ -187,6 +187,32 @@ $date_f = date('Y-m-d');
                                                 ?>
                                         <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?php echo number_format($volumeprocessed, 2);?></span> kg</h4>
                                         <p class="text-muted mb-0">Total Volume Processed</p>
+                                    </div>
+                                    <!--<p class="text-muted mt-3 mb-0"><span class="text-danger me-1"><i class="mdi mdi-arrow-down-bold me-1"></i>6.24%</span> since last week
+                                    </p>-->
+                                </div>
+                            </div>
+                            <?php endwhile; ?> 
+                        </div>
+                        <!-- end col-->
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="float-end mt-2">
+                                        <i class="uil-graph-bar" style="color: blue; font-size: 30px;"></i>
+                                    </div>
+                                    <div>
+
+                                    <?php
+                                            include 'db.inc.php';
+                                            $query = mysqli_query($conn,  "SELECT SUM(released) FROM hubpos_inventory WHERE trans_adate='$date_f'");
+                                            while($result = mysqli_fetch_array($query)): ?>
+                                                <?php                                                            
+                                                    $volumesold = $result['SUM(released)'];                                                               
+                                                ?>
+                                        <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?php echo number_format($volumesold, 2);?></span> kg</h4>
+                                        <p class="text-muted mb-0">Total Volume Sold</p>
                                     </div>
                                     <!--<p class="text-muted mt-3 mb-0"><span class="text-danger me-1"><i class="mdi mdi-arrow-down-bold me-1"></i>6.24%</span> since last week
                                     </p>-->
