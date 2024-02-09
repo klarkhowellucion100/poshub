@@ -131,16 +131,14 @@ $dateto = $_POST['dateto'];
                                     </div>
                                     <div>
 
-                                                    <?php 
-                                 
-
-                                                                include 'db.inc.php';
-                                                                $query = mysqli_query($conn,  "SELECT COUNT(trans_partner) FROM farmers_delivery WHERE (trans_adate BETWEEN '$datefrom' AND '$dateto')");
-                                                                while($result = mysqli_fetch_array($query)): ?>
-                                                                    <?php                                                            
-                                                                        $numRow02 = $result['COUNT(trans_partner)'];  
-                                                               
-                                                            ?>
+                                            <?php 
+                                                include 'db.inc.php';
+                                                $query = mysqli_query($conn,  "SELECT COUNT(trans_partner) FROM farmers_delivery WHERE (trans_adate BETWEEN '$datefrom' AND '$dateto')");
+                                                while($result = mysqli_fetch_array($query)): ?>
+                                                    <?php                                                            
+                                                        $numRow02 = $result['COUNT(trans_partner)'];  
+                                                
+                                            ?>
                                         <h4 class="mb-1 mt-1"> <span data-plugin="counterup"><?php echo $numRow02;?></span></h4>
                                         <p class="text-muted mb-0">Exp Farmers to Deliver</p>
                                     </div>
@@ -160,8 +158,7 @@ $dateto = $_POST['dateto'];
                                     </div>
                                     <div>
 
-                                    <?php 
-                                 
+                                        <?php 
                                             include 'db.inc.php';
                                             $query = mysqli_query($conn,  "SELECT COUNT(trans_partner) FROM farmers_delivery WHERE (trans_adate BETWEEN '$datefrom' AND '$dateto') AND total_volume!='0'");
                                             while($result = mysqli_fetch_array($query)): ?>
@@ -169,6 +166,7 @@ $dateto = $_POST['dateto'];
                                                     $numRow02a = $result['COUNT(trans_partner)'];  
                                             
                                         ?>
+
                                         <h4 class="mb-1 mt-1"> <span data-plugin="counterup"><?php echo $numRow02a;?></span></h4>
                                         <p class="text-muted mb-0">Farmers Who Delivered</p>
                                     </div>
